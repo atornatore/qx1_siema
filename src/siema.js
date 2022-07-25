@@ -416,6 +416,7 @@ export default class Siema {
       this.currentSlide = this.innerElements.length <= this.perPage ? 0 : this.innerElements.length - this.perPage;
     }
 
+    this.config.onChange.call(this);
     this.selectorWidth = this.selector.offsetWidth;
 
     this.buildSliderFrame();
